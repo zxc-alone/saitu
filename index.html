@@ -11,8 +11,42 @@
 body {
     margin: 0;/*Внешний отступ со всех сторон*/
     font-family: Arial, sans-serif; /*Шрифт*/
-    background-color: #3c33b3; /*Фон*/
-    color: #fff;
+}
+/* Основная разметка тела */
+body {
+ transition: all 0.3s ease-in-out;
+}
+
+/* Цветовая схема по умолчанию (светлый фон) */
+.light-theme {
+ background-color: white;
+ color: black;
+
+}
+
+/* Темная цветовая схема */
+.dark-theme {
+ background-color: black;
+ color: white;
+}
+
+/* Зелёная цветовая схема */
+.green-theme {
+ background-color: #bdfdbb;
+ color: #0a7c10;
+}
+
+.witeblue-theme {
+ background-color: #0bfbff;
+ color: #8170e2;
+}
+
+/* Стилизация select элемента */
+#theme-select {
+ border-radius: 5px;
+ width: auto;
+ outline: none;
+ box-shadow: rgba(0, 0, 0, .1) 0 0 5px;
 }
 
 
@@ -215,6 +249,11 @@ button:first-child:hover {
     width: 25%;
     height: 25%;
 }
+
+.Massiv{
+    padding: 60px;
+    margin-bottom: 60px;
+}
 </style>
 <body>
     <div>
@@ -223,7 +262,12 @@ button:first-child:hover {
             <a href="index.html" class="glavnaya">Главная</a>
             <a href="about.html"class="glavnaya">Обо мне</a>
             <a href="new.html"class="glavnaya">Оставить заявку</a>
-            <a href="https://web.telegram.org/a/@Kiilyaaaa">Скинуть своё фото</a>
+            <select id="theme-select">
+                        <option value="light">Светлая тема</option>
+                        <option value="dark">Темная тема</option>
+                        <option value="green">Зелёная тема</option>
+                        <option value="witeblue">Светло-синяя тема</option>
+            </select>
         </nav>
 </div>
     <div class="top_content">
@@ -234,31 +278,19 @@ button:first-child:hover {
                 <button onclick="moth()"> Вывести день недели по числу </button>
                 <button onclick="lvlupAge()"> Узнать сколько вам будет через 5 лет </button>
             </div>
-            <div class="moreButton">
-                <button onclick="sum()"> Найти сумму двух любых чисел </button>
-                <button onclick="minus()"> Найти разность двух любых чисел </button>
-                <button onclick="del()"> Найти часное двух любых чисел (На 0 делить нельзя) </button>
-                <button onclick="kvadratick()"> Найти произведение двух любых чисел </button>
-            </div>
+<div class="moreButton" style="display: flex; gap: 10px;">
+    <button onclick="sum()"> Найти сумму двух любых чисел </button> 
+    <button onclick="minus()"> Найти разность двух любых чисел </button>
+    <button onclick="del()"> Найти частное двух любых чисел (На 0 делить нельзя) </button>
+    <button onclick="kvadratick()"> Найти произведение двух любых чисел </button>
+</div>
+
         </div>
     </div>
     <div class="Massiv"><button onclick="alert(numbers.sort(function(a, b) { return a - b; }))"> Сгенерировать отсортированный массив </button></div>
 <div class="top_logo">
-    <div class="top_logo">
-        
-    </div>
+
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <script src="chota.js"></script>
 </body>
 </html>
