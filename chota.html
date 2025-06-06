@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+</head>
+<style>
+    /* Общие стили */
+
+body {
+    margin: 0;/*Внешний отступ со всех сторон*/
+    font-family: Arial, sans-serif; /*Шрифт*/
+}
+/* Основная разметка тела */
+body {
+ transition: all 0.3s ease-in-out;
+}
+
+/* Цветовая схема по умолчанию (светлый фон) */
+.light-theme {
+ background-color: white;
+ color: black;
+
+}
+
+/* Темная цветовая схема */
+.dark-theme {
+ background-color: black;
+ color: white;
+}
+
+/* Зелёная цветовая схема */
+.green-theme {
+ background-color: #bdfdbb;
+ color: #0a7c10;
+}
+
+.witeblue-theme {
+ background-color: #0bfbff;
+ color: #8170e2;
+}
+
+/* Стилизация select элемента */
+#theme-select {
+ border-radius: 5px;
+ width: auto;
+ outline: none;
+ box-shadow: rgba(0, 0, 0, .1) 0 0 5px;
+}
+
+
+/* Хедер */
+
+.header {
+    display: flex; /*Гибкая картинка для тогог чтобы они могли растянутся под размер окна браузера*/
+    justify-content: center; /*- Это свойство используется в Flexbox (гибкой раскладке).
+                            - Оно распределяет элементы внутри контейнера так, чтобы они были максимально разнесены друг от друга: 
+                            первый элемент прижимается к началу, последний — к концу, а остальные равномерно распределяются между ними.*/
+    align-items: center;
+    padding: 20px 40px; /* отступ*/
+    background-color: #16094d;
+    max-width: auto;
+    max-height: auto;
+    width: auto;
+    height: auto;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;/*текст без изменений*/
+    margin: 0 15px; /*отступ*/                  
+    font-size: 16px; /* размер*/
+}
+
+.header a:hover {
+    color: #00d4ff;
+    /* Акцентный цвет */
+}
+
+
+/* Основной контент */
+
+.top_content {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;/* все элементы блока по центру*/
+    padding: 50px 40px;
+    min-height: 500px; /*минимальная высота*/
+    width: auto;
+    height: auto;
+}
+
+
+/* Левая часть с текстом и кнопками */
+
+.top_info {
+    max-width: 50%; /*Максимальная ширина*/
+}
+
+.top_info h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;/*межстрочный интервал для текста*/
+}
+
+.top_info p {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
+
+
+/* Кнопки */
+
+.top_buttons {
+    display: flex;
+    gap: 20px; /*Отступ между кнопками*/
+}
+
+.top_buttons button {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;  /*— это значение свойства cursor, которое устанавливает внешний вид курсора при наведении на элемент.*/
+    transition: background-color 0.3s; /*- Это свойство задаёт плавное изменение стиля (анимацию) при изменении свойства `background-color`.
+                                        - `0.3s` — это время анимации (0.3 секунды).
+                                        - Пример: если кнопка меняет цвет фона при наведении, то с `transition` этот цвет будет меняться плавно, а не мгновенно.
+                                        Здесь применяется для 2 кнопки*/
+}
+
+.top_buttons button:first-child {
+    background-color: #007bff;
+    /* Синяя кнопка */
+    color: #fff;
+}
+
+.top_buttons button:first-child:hover {
+    background-color: #0056b3;/*- `:hover` — срабатывает, когда пользователь наводит курсор на элемент.*/
+}
+
+.top_buttons button:last-child {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.top_buttons button:last-child:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+/* Правая часть с изображением */
+
+.top_content img {
+    max-width: 20%;
+    height: auto;
+}
+
+
+/* Лого */
+
+.top_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 0;
+    width: auto;
+    height: auto;
+}
+
+.top_logo img {
+    height: 60px;
+    /* Размер логотипов */
+}
+
+
+
+
+/*`<nav>` — это HTML-тег, который используется для обозначения навигационной секции на веб-странице. Простыми словами, это блок, где обычно размещают ссылки для перемещения по сайту (меню).*/
+.frame {
+    max-width: 800px;
+    max-height: 800px;
+    width: 50%;
+    height: 50%;
+    border: 2px solid #10f7ff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.image{
+    width: 50%;
+    height: 50%;
+}
+
+button {
+    background-color: #007bff;
+    /* Синяя кнопка */display: flex;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;  /*— это значение свойства cursor, которое устанавливает внешний вид курсора при наведении на элемент.*/
+    transition: background-color 0.3s; /*- Это свойство задаёт плавное изменение стиля (анимацию) при изменении свойства `background-color`.
+                                        - `0.3s` — это время анимации (0.3 секунды).
+                                        - Пример: если кнопка меняет цвет фона при наведении, то с `transition` этот цвет будет меняться плавно, а не мгновенно.
+                                        Здесь применяется для 2 кнопки*/
+}
+button:first-child:hover {
+    background-color: #034b99;/*- `:hover` — срабатывает, когда пользователь наводит курсор на элемент.*/
+}
+.frame img{
+    width: 30%;
+    height: 30%;
+}
+.client-feedback {
+    background-color: #0f024d; /* Фоновый цвет блока */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругление углов */
+    margin: 20px auto; /* Центрирование блока */
+    max-width: auto; /* Максимальная ширина блока */
+    max-height: max-content;
+    text-align: center; /* Выравнивание текста по центру */
+
+}
+
+.client-feedback h1 {
+    font-size: 24px; /* Размер заголовка */
+    margin-bottom: 15px; /* Отступ снизу заголовка */
+    color: #d9ff00;
+}
+
+.client-feedback p {
+    margin: 10px 0; /* Отступы между отзывами */
+    font-size: 18px; /* Размер текста отзыва */
+    color: #d9ff00; /* Цвет текста */
+}
+.zaglushka{
+    width: auto;
+    height: auto;
+    min-width: 1%;
+}
+.client-feedback img{
+    width: 25%;
+    height: 25%;
+}
+
+.Massiv{
+    padding: 60px;
+    margin-bottom: 60px;
+}
+</style>
+<body>
+    <div>
+    <div class="header">
+        <nav align="center">
+            <a href="index.html" class="glavnaya">Главная</a>
+            <a href="about.html"class="glavnaya">Обо мне</a>
+            <a href="new.html"class="glavnaya">Оставить заявку</a>
+            <select id="theme-select">
+                        <option value="light">Светлая тема</option>
+                        <option value="dark">Темная тема</option>
+                        <option value="green">Зелёная тема</option>
+                        <option value="witeblue">Светло-синяя тема</option>
+            </select>
+        </nav>
+</div>
+    <div class="top_content">
+        <div>
+            <h1>Js это очень круто  </h1>
+            <p>С помощью него можно реализовать много крутых идей одна из них это узнать день недели по цифре <br>Temporibus asperiores aperiam cupiditate fugit architecto rerum <br>eius est accusantium possimus iste, recusandae perferendis ipsam?</p>
+            <div class="top_buttons">
+                <button onclick="moth()"> Вывести день недели по числу </button>
+                <button onclick="lvlupAge()"> Узнать сколько вам будет через 5 лет </button>
+            </div>
+<div class="moreButton" style="display: flex; gap: 10px;">
+    <button onclick="sum()"> Найти сумму двух любых чисел </button> 
+    <button onclick="minus()"> Найти разность двух любых чисел </button>
+    <button onclick="del()"> Найти частное двух любых чисел (На 0 делить нельзя) </button>
+    <button onclick="kvadratick()"> Найти произведение двух любых чисел </button>
+</div>
+
+        </div>
+    </div>
+    <div class="Massiv"><button onclick="alert(numbers.sort(function(a, b) { return a - b; }))"> Сгенерировать отсортированный массив </button></div>
+<div class="top_logo">
+
+</div>
+<script src="chota.js"></script>
+</body>
+</html>

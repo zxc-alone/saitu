@@ -85,3 +85,33 @@ const checkMax = () => {
         
         alert(Math.max(number1, number2, number3));
     }
+
+
+
+    // Получаем ссылку на селект-тему
+const themeSelect = document.getElementById("theme-select");
+
+// Функция изменения темы при выборе
+themeSelect.addEventListener("change", () => {
+    const selectedTheme = themeSelect.value;
+    const bodyEl = document.querySelector("body");
+
+    // Удаляем предыдущие классы тем
+    bodyEl.className = "";
+
+    // Устанавливаем новую тему согласно выбору
+    switch(selectedTheme) {
+        case 'light':
+            bodyEl.classList.add('light-theme');
+            break;
+        case 'dark':
+            bodyEl.classList.add('dark-theme');
+            break;
+        case 'green':
+            bodyEl.classList.add('green-theme');
+            break;
+        case 'witeblue':
+            bodyEl.classList.add('witeblue-theme');
+            break;
+    }
+});
