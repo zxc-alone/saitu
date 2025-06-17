@@ -157,19 +157,6 @@ console.log(target.checked)
 
 
 
-    const eventOptions = { bubbles: true, canceleble:true}
-    const event = new Event('click', eventOptions)
-    event.viev = window,
-
-    const mouseEvent = new MouseEvent('click',{
-        ...eventOptions,
-        viev: window,
-    })
-
-    document.addEventListener('click', (event)=>{
-console.log(event.isTrusted)
-    })
-
 const counterDiv = document.getElementById('counter');
 let count = 0;
 counterDiv.addEventListener('mouseover', () => {
