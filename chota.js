@@ -159,11 +159,11 @@ console.log(target.checked)
 
     const eventOptions = { bubbles: true, canceleble:true}
     const event = new Event('click', eventOptions)
-    event.viev = ".schetchik"
+    event.viev = window,
 
     const mouseEvent = new MouseEvent('click',{
         ...eventOptions,
-        viev: ".schetchik"
+        viev: window,
     })
 
     document.addEventListener('click', (event)=>{
