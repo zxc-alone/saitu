@@ -176,6 +176,6 @@ function checkPassword() {
     } else {
         passwordInput.classList.remove("valid");
         passwordInput.classList.add("invalid");
-        errorMessage.textContent = "Чосал слен?";
+        errorMessage.textContent = "Пароль неверный смотри в справку";
     }
 }
