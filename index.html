@@ -92,26 +92,6 @@ body {
 }
 
 
-/* Левая часть с текстом и кнопками */
-
-.top_info {
-    max-width: 50%; /*Максимальная ширина*/
-}
-
-.top_info h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    line-height: 1.2;/*межстрочный интервал для текста*/
-}
-
-.top_info p {
-    font-size: 16px;
-    color: #b0b0b0;
-    margin-bottom: 30px;
-}
-
-
 /* Кнопки */
 
 .top_buttons {
@@ -153,50 +133,6 @@ body {
 }
 
 
-/* Правая часть с изображением */
-
-.top_content img {
-    max-width: 20%;
-    height: auto;
-}
-
-
-/* Лого */
-
-.top_logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding: 20px 0;
-    width: auto;
-    height: auto;
-}
-
-.top_logo img {
-    height: 60px;
-    /* Размер логотипов */
-}
-
-
-
-
-/*`<nav>` — это HTML-тег, который используется для обозначения навигационной секции на веб-странице. Простыми словами, это блок, где обычно размещают ссылки для перемещения по сайту (меню).*/
-.frame {
-    max-width: 800px;
-    max-height: 800px;
-    width: 50%;
-    height: 50%;
-    border: 2px solid #10f7ff;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-}
-.image{
-    width: 50%;
-    height: 50%;
-}
-
 button {
     background-color: #007bff;
     /* Синяя кнопка */display: flex;
@@ -214,45 +150,17 @@ button {
 button:first-child:hover {
     background-color: #034b99;/*- `:hover` — срабатывает, когда пользователь наводит курсор на элемент.*/
 }
-.frame img{
-    width: 30%;
-    height: 30%;
-}
-.client-feedback {
-    background-color: #0f024d; /* Фоновый цвет блока */
-    padding: 20px; /* Внутренние отступы */
-    border-radius: 8px; /* Скругление углов */
-    margin: 20px auto; /* Центрирование блока */
-    max-width: auto; /* Максимальная ширина блока */
-    max-height: max-content;
-    text-align: center; /* Выравнивание текста по центру */
 
-}
-
-.client-feedback h1 {
-    font-size: 24px; /* Размер заголовка */
-    margin-bottom: 15px; /* Отступ снизу заголовка */
-    color: #d9ff00;
-}
-
-.client-feedback p {
-    margin: 10px 0; /* Отступы между отзывами */
-    font-size: 18px; /* Размер текста отзыва */
-    color: #d9ff00; /* Цвет текста */
-}
-.zaglushka{
-    width: auto;
-    height: auto;
-    min-width: 1%;
-}
-.client-feedback img{
-    width: 25%;
-    height: 25%;
-}
 
 .Massiv{
     padding: 60px;
     margin-bottom: 60px;
+}
+    .valid {
+    background-color: lightgreen;
+}
+.invalid {
+    border: 2px solid red;
 }
 </style>
 <body>
@@ -299,6 +207,10 @@ button:first-child:hover {
 </form>
         
 <div id="counter" align="center">0</div>
+        <label for="password">Пароль:</label>
+<input type="password" id="password">
+<button onclick="checkPassword()" type="submit">Отправить</button>
+<p id="error-message" style="color:red;"></p>
 <script src="chota.js"></script>
 </body>
 </html>
