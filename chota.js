@@ -149,9 +149,9 @@ console.log(target.checked)
     });
             formEl.addEventListener('submit', function (e) {
         if (inputEl.checked) {
-            console.log("МЕГА ХАРОШ!!!")
+            alert("МЕГА ХАРОШ!!!")
         } else {
-            console.log("YOU INVALID!!!")
+            alert("YOU INVALID!!!")
         }
     });
 
