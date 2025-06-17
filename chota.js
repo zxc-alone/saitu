@@ -125,4 +125,3 @@ document.addEventListener('DOMContentLoaded', ()=>{
 window.addEventListener('load', ()=>{
     console.log('Вся страница загрузилась');
 });
-за что отвечает этот блок кода?
