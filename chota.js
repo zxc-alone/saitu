@@ -125,3 +125,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
 window.addEventListener('load', ()=>{
     console.log('Вся страница загрузилась');
 });
+
+        const formEl = document.querySelector('.form')
+        const inputEl = document.querySelector('.check');
+            inputEl.addEventListener('click', function(e){
+const target = e.target;
+console.log(target.checked)
+    });
+            formEl.addEventListener('submit', function (e) {
+        if (inputEl.checked) {
+            console.log("МЕГА ХАРОШ!!!")
+        } else {
+            console.log("YOU INVALID!!!")
+        }
+    });
