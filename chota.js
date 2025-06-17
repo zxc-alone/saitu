@@ -163,3 +163,19 @@ counterDiv.addEventListener('mouseover', () => {
     count += 1;
     counterDiv.textContent = count;
 })
+
+
+function checkPassword() {
+    const passwordInput = document.getElementById("password");
+    const errorMessage = document.getElementById("error-message")
+    const password = passwordInput.value;
+    if (password === "пароль") {
+        passwordInput.classList.remove("invalid");
+        passwordInput.classList.add("valid");
+        errorMessage.textContent = "";
+    } else {
+        passwordInput.classList.remove("valid");
+        passwordInput.classList.add("invalid");
+        errorMessage.textContent = "Чосал слен?";
+    }
+}
