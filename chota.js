@@ -126,6 +126,21 @@ window.addEventListener('load', ()=>{
     console.log('Вся страница загрузилась');
 });
 
+
+    const eventOptions = { bubbles: true, canceleble:true}
+    const event = new Event('click', eventOptions)
+    event.viev = window
+
+    const mouseEvent = new MouseEvent('click',{
+        ...eventOptions,
+        viev: window,
+    })
+
+    document.addEventListener('click', (event)=>{
+console.log(event.isTrusted)
+    })
+
+
         const formEl = document.querySelector('.form')
         const inputEl = document.querySelector('.check');
             inputEl.addEventListener('click', function(e){
