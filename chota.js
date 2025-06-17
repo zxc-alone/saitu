@@ -154,3 +154,25 @@ console.log(target.checked)
             console.log("YOU INVALID!!!")
         }
     });
+
+
+
+    const eventOptions = { bubbles: true, canceleble:true}
+    const event = new Event('click', eventOptions)
+    event.viev = ".schetchik"
+
+    const mouseEvent = new MouseEvent('click',{
+        ...eventOptions,
+        viev: ".schetchik"
+    })
+
+    document.addEventListener('click', (event)=>{
+console.log(event.isTrusted)
+    })
+
+const counterDiv = document.getElementById('counter');
+let count = 0;
+counterDiv.addEventListener('mouseover', () => {
+    count += 1;
+    counterDiv.textContent = count;
+})
