@@ -218,9 +218,9 @@ const handlePositionError = (error) => {
 
 
 
-const box = document.querySelector('#box')
-console.log(box.scrollTop, box.scrollLeft);
-box.scrollTop = 500
+// const box = document.querySelector('#box')
+// console.log(box.scrollTop, box.scrollLeft);
+// box.scrollTop = 500
 
 document.addEventListener('scroll', function (e){
     console.log(document.documentElement.scrollTop);
@@ -396,6 +396,7 @@ const articlesData = [
 
     // Рендерим статьи при загрузке страницы
     renderArticles();
+
 
 
 
